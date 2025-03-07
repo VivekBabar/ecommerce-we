@@ -11,6 +11,9 @@ body {
     margin-top: 0;
     font-family: 'Delius Swash Caps', cursive;
 }
+.header:hover{
+    
+}
 
 /* Card Styles with Animation */
 .card {
@@ -26,6 +29,8 @@ body {
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 40px rgba(216, 152, 152, 0.3);
+
+
 }
 
 /* Fade-in Animation for Card */
@@ -61,12 +66,15 @@ body {
 @keyframes pulse {
     0% {
         transform: scale(1);
+        background-color: #180707;
     }
     50% {
         transform: scale(1.05);
+        background-color: #988c8c;
     }
     100% {
         transform: scale(1);
+        background-color: #180707;
     }
 }
 
