@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+// Check if a success message is set
+if (isset($_SESSION['success_message'])) {
+    $success_message = $_SESSION['success_message'];
+    // Clear the session variable after displaying the message
+    unset($_SESSION['success_message']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +21,13 @@ session_start();
     <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="product.css">
+    <script>
+        // Function to display a popup message
+        function showPopup(message) {
+            alert(message);
+        }
+    </script>
+
 
 </head>
 <body>
@@ -250,6 +263,93 @@ include 'includes/check-if-added.php';
                 </div>
                 <div class="col-md-3 col-6 py-3">
                     <div class="card">
+                        <img src="images/shoe1.jpg" alt="" class="img-fluid pb-1">
+                        <div class="figure-caption">
+                            <h6>Nike White Sneaker</h6>
+                            <h6>Price :Rs 8000</h6>
+                            <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(9)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    <p><a href="cart-add.php?id=9" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p>
+                    <?php
+                    }
+                    }
+                    ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 py-3">
+                    <div class="card">
+                        <img src="images/shoe1.jpg" alt="" class="img-fluid pb-1">
+                        <div class="figure-caption">
+                            <h6>Nike White Sneaker</h6>
+                            <h6>Price :Rs 8000</h6>
+                            <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(9)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    <p><a href="cart-add.php?id=9" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p>
+                    <?php
+                    }
+                    }
+                    ?>
+                        </div>
+                    </div>
+                </div>                <div class="col-md-3 col-6 py-3">
+                    <div class="card">
+                        <img src="images/shoe1.jpg" alt="" class="img-fluid pb-1">
+                        <div class="figure-caption">
+                            <h6>Nike White Sneaker</h6>
+                            <h6>Price :Rs 8000</h6>
+                            <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(9)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    <p><a href="cart-add.php?id=9" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p>
+                    <?php
+                    }
+                    }
+                    ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 py-3">
+                    <div class="card">
+                        <img src="images/shoe1.jpg" alt="" class="img-fluid pb-1">
+                        <div class="figure-caption">
+                            <h6>Nike White Sneaker</h6>
+                            <h6>Price :Rs 8000</h6>
+                            <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(9)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    <p><a href="cart-add.php?id=9" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p>
+                    <?php
+                    }
+                    }
+                    ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 py-3">
+                    <div class="card">
                         <img src="images/shoe2.jpg" alt="" class="img-fluid pb-1">
                         <div class="figure-caption">
                             <h6>Nike White Shoes</h6>
@@ -406,6 +506,96 @@ include 'includes/check-if-added.php';
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3 col-6 py-3" >
+                        <div class="card">
+                            <img src="images/sp1.jpg" alt="" class="img-fluid pb-1">
+                            <div class="figure-caption">
+                                <h6>Beats Headphone</h6>
+                                <h6>Price :Rs 22,500</h6>
+                                <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(13)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    <p> <a href="cart-add.php?id=13" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p>
+                    <?php
+                    }
+                    }
+                    ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 py-3">
+                        <div class="card">
+                            <img src="images/sp2.jpg" alt="" class="img-fluid pb-1">
+                            <div class="figure-caption">
+                                <h6>Zolo Headphone</h6>
+                                <h6>Price :Rs 4500</h6>
+                                <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(14)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    </p><a href="cart-add.php?id=14" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p>
+                    <?php
+                    }
+                    }
+                    ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 py-3">
+                        <div class="card">
+                            <img src="images/sp3.jpg" alt="" class="img-fluid pb-1">
+                            <div class="figure-caption">
+                                <h6>Sony Speaker</h6>
+                                <h6>Price :Rs 10,500</h6>
+                                <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(15)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    </p><a href="cart-add.php?id=15" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p>
+                   <?php
+                    }
+                    }
+                    ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 py-3">
+                        <div class="card">
+                            <img src="images/sp4.jpg" alt="" class="img-fluid pb-1">
+                            <div class="figure-caption">
+                                <h6>Airpods</h6>
+                                <h6>Price :Rs 15,000</h6>
+                                <?php if (!isset($_SESSION['email'])) {?>
+                    <p><a href="index.php#login" role="button" class="btn btn-warning  text-white ">Add To Cart</a></p>
+                    <?php
+                    } else {
+                    if (check_if_added_to_cart(16)) {
+                    echo '<p><a href="#" class="btn btn-warning  text-white" disabled>Added to cart</a></p>';
+                    } else {
+                    ?>
+                    <p> <a href="cart-add.php?id=16" name="add" value="add" class="btn btn-warning  text-white">Add to cart</a></p> >
+    
+
+                    <?php
+                    }
+                    }
+                    ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
       </div>
       <!--menu list ends-->
@@ -452,6 +642,13 @@ include 'includes/check-if-added.php';
         </div>
     </div>
 </div>
+<?php
+    // Display the popup if a success message exists
+    if (isset($success_message)) {
+        echo "<script>showPopup('$success_message');</script>";
+    }
+    ?>
+
 <script>
 $(document).ready(function(){
     // Check if the "added" query parameter is present
