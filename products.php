@@ -42,9 +42,7 @@ include 'includes/check-if-added.php';
         <div class="jumbotron text-center">
             <h1>Welcome to Planet Shopify!</h1>
             <p>We have wide range of products for you.No need to hunt around,we have all in one place</p>
-            <input type="text" class="form-control" placeholder="Search">
-            <input type="button" class="btn btn-warning" value="Search">
-            
+
         </div>
         <!--jumbutron ends-->
         <!--breadcrumb start-->

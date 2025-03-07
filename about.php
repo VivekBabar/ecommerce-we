@@ -1,123 +1,216 @@
-<?php
-require ("includes/common.php");
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Planet Shopify | Online Shopping Site for Men</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Delius Swash Caps' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Delius Swash Caps' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="admin.css"> -->
 </head>
-<body style="overflow-x:hidden; padding-bottom:100px;">
-  <?php
-        include 'includes/header_menu.php';
-    ?>
-  <div>
-    <div class="container mt-5 ">
-      <div class="row justify-content-around">
-        <div class="col-md-5 mt-3">
-          <h3 class="text-warning pt-3 title">Who We Are ?</h3>
-          <hr />
-          <img
-            src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&h=400&q=80"
-            class="img-fluid d-block rounded mx-auto image-thumbnail">
-          <p class="mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque, consequuntur cumque odit
-            sapiente blanditiis, expedita ipsam molestiae voluptates reprehenderit ea modi eaque rerum dicta dolores,
-            iusto ullam aliquid non?
-            Quidem quae odio nemo cumque consectetur natus doloremque voluptatem consequatur voluptate laboriosam, amet
-            maiores excepturi sunt aliquid magni voluptatibus aperiam laudantium dolores reiciendis? Laborum laboriosam,
-            nam ullam totam amet et.
-            Earum recusandae voluptate accusantium, placeat alias consequuntur aspernatur sed explicabo impedit et aut
-            assumenda hic repellendus esse facere ratione quod vitae laudantium. Obcaecati nobis sequi esse assumenda,
-            rerum dolores pariatur.</p>
-        </div>
-        <div class="col-md-5 mt-3">
-          <span class="text-warning pt-3">
-            <h1 class="title">LIVE SUPPORT</h1>
-            <h3>24 hours|7 days a week| 365 days a year Live Technical Support</h3>
-          </span>
-          <hr>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-            letters. There are many variations of passages of Lorel Ipsum available, but the majority have suffered
-            alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
-            hidden in the middle of text.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam ducimus a illum, at voluptate, iusto
-            eos tempora in quam exercitationem officia autem maxime deserunt. Reprehenderit necessitatibus sequi in
-            fugit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, facilis. Reiciendis dicta fuga esse
-            at excepturi inventore perferendis? Consequatur dicta blanditiis, magnam consequuntur possimus excepturi
-            eaque neque nulla libero temporibus!
-          </p>
+<body>
 
-        </div>
-      </div>
+    <div class="header">
+        <h1>Admin Panel</h1>
     </div>
-  </div>
-  <div class="container pb-3">
-  </div>
-  <div class="container mt-3 d-flex justify-content-center card pb-3 col-md-6">
 
-    <form class="col-md-12" action="https://formspree.io/EnterYourEmail" method="POST" name="_next">
-      <h3 class="text-warning pt-3 title mx-auto">Contact Form</h3>
-      <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Email"
-          name="email">
-      </div>
+    <!-- Container to center the card -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="col-md-6 col-12 py-3">
+            <div class="card">
+                <img id="productImage" src="images/shirt2.jpg" alt="Product Image" class="img-fluid pb-1">
+                
+                <div class="figure-caption">
+                    <h6>Product Name</h6>
+                    <input type="text" id="productName" class="form-control" placeholder="Name">
 
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="5"></textarea>
-      </div>
-      <input type="hidden" name="_next" value="http://localhost/foody/about.php" />
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
+                    <h6>Price</h6>
+                    <input type="text" id="productPrice" class="form-control" placeholder="Price">
 
+                    <h6>Add Image</h6>
+                    <input type="file" id="productImageUpload" class="form-control">
 
-  </div>
-  <!--footer -->
-  <?php include 'includes/footer.php'?>
-  <!--footer end-->
+                    <?php if (!isset($_SESSION['email'])) { ?>
+                        <p>
+                            <button id="addToShopBtn" class="btn btn-warning text-white">Add To Shop</button>
+                        </p>
+                    <?php } else { 
+                        if (check_if_added_to_cart(6)) { ?>
+                            <p>
+                                <a href="#" class="btn btn-warning text-white" disabled>Added to cart</a>
+                            </p>
+                        <?php } else { ?>
+                            <p>
+                                <a href="cart-add.php?id=6" name="add" value="add" class="btn btn-warning text-white">Add to cart</a>
+                            </p>
+                        <?php } 
+                    } ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- JavaScript to Handle Add To Shop -->
+    <script>
+       document.getElementById('addToShopBtn').addEventListener('click', function () {
+            const productName = document.getElementById('productName').value;
+            const productPrice = document.getElementById('productPrice').value;
+            const productImageUpload = document.getElementById('productImageUpload').files[0];
+
+            // Validate inputs
+            if (!productName || !productPrice || !productImageUpload) {
+                alert('Please fill all fields and upload an image.');
+                return;
+            }
+
+            // Create a FormData object to send data
+            const formData = new FormData();
+            formData.append('name', productName);
+            formData.append('price', productPrice);
+            formData.append('image', productImageUpload);
+
+            // Log FormData for debugging
+            console.log([...formData.entries()]);
+
+            // Send data to the server using Fetch API
+            fetch('add_product.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Update the card dynamically
+                    document.getElementById('productImage').src = URL.createObjectURL(productImageUpload);
+                    alert('Product added successfully!');
+                } else {
+                    alert('Failed to add product: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while adding the product.');
+            });
+        });
+    </script>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $('[data-toggle="popover"]').popover();
-  });
-  $(document).ready(function () {
-
-    if (window.location.href.indexOf('#login') != -1) {
-      $('#login').modal('show');
+<style>
+    /* General Styles */
+    body {
+        background: rgb(133, 102, 102);
+        color: white;
+        text-align: center;
+        padding: 2px;
+        font-family: 'Andika', sans-serif;
     }
 
-  });
-</script>
-<?php if(isset($_GET['error'])){ $z=$_GET['error']; echo "<script type='text/javascript'>
-$(document).ready(function(){
-$('#signup').modal('show');
-});
-</script>"; echo "
-<script type='text/javascript'>alert('".$z."')</script>";} ?>
-<?php if(isset($_GET['errorl'])){ $z=$_GET['errorl']; echo "<script type='text/javascript'>
-$(document).ready(function(){
-$('#login').modal('show');
-});
-</script>"; echo "
-<script type='text/javascript'>alert('".$z."')</script>";} ?>
+    .header h2 {
+        margin-top: 0;
+        font-family: 'Delius Swash Caps', cursive;
+    }
+    .header:hover{
+        
+    }
+
+    /* Card Styles with Animation */
+    .card {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        background: rgb(0, 0, 0);
+        animation: fadeInUp 0.8s ease-out;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(216, 152, 152, 0.3);
+    }
+
+    /* Fade-in Animation for Card */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Button Styles with Animation */
+    .btn-warning {
+        background: #ffc107;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+        animation: pulse 2s infinite;
+    }
+
+    .btn-warning:hover {
+        background: #d4958f;
+        transform: scale(1.1);
+        animation: none; /* Disable pulse animation on hover */
+    }
+
+    /* Pulse Animation for Button */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            background-color: #180707;
+        }
+        50% {
+            transform: scale(1.05);
+            background-color: #988c8c;
+        }
+        100% {
+            transform: scale(1);
+            background-color: #180707;
+        }
+    }
+
+    /* Background Gradient Animation */
+    body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .header {
+        height: 100px;
+        width: 100%;
+        background-color: #180707;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-family: 'Andika', sans-serif;
+    }
+
+    /* Center the card */
+    .container {
+        height: calc(100vh - 100px); /* Subtract header height */
+    }
+</style>
 </html>

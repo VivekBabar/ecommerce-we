@@ -88,7 +88,7 @@
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Added successfully');
+        alert('An error occurred while adding the product.');
     });
 });
 

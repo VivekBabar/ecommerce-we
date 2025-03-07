@@ -21,7 +21,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    background: rgb(0, 0, 0);
+    background: rgb(188, 153, 153);
     animation: fadeInUp 0.8s ease-out;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -99,7 +99,7 @@ body {
 .header{
     height: 100px;
     width: 100%;
-    background-color: #180707;
+    background-color: #5c4747;
     color: white;
     display: flex;
     justify-content: center;
