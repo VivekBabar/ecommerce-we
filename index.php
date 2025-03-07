@@ -12,7 +12,10 @@ session_start();
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <link href='https://fonts.googleapis.com/css?family=Delius Swash Caps' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body style="margin-bottom:200px">
     <!--Header-->
@@ -50,7 +53,7 @@ include 'includes/check-if-added.php';
              </div>
             <div class="col-6 col-md-3 py-3 " >
                 <a href="products.php#shirt"  >
-                  <img src="images/clothing.jpg" class="img-fluid zoom" alt="" style="border-radius:0.5rem" >
+                  <img src="images/clothing.jpg" class="img-fluid zoom" alt="" style="border-radius:0.5rem" color="white">
                      <div class="h5 pt-3 font-weight-bolder">
                         Clothing
                      </div>
@@ -58,7 +61,7 @@ include 'includes/check-if-added.php';
              </div>
             <div class="col-6 col-md-3 py-3">
                 <a href="products.php#shoes">
-                 <img src="images/shoes.jpg" class="img-fluid   " alt="" style="border-radius:0.5rem">
+                 <img src="images/shoes.jpg" class="img-fluid" alt="" style="border-radius:0.5rem" color="white">
                 <div class="h5 pt-3 font-weight-bolder">
                     Shoes
                  </div>
@@ -66,7 +69,7 @@ include 'includes/check-if-added.php';
              </div>
             <div class="col-6 col-md-3 py-3">
                 <a href="products.php#headphones">
-                 <img src="images/headphones.jpg" class="img-fluid  " alt="" style="border-radius:0.5rem">
+                 <img src="images/headphones.jpg" class="img-fluid  " alt="" style="border-radius:0.5rem" color="white">
                  <div class="h5 pt-3 font-weight-bolder">
                     Headphones
                  </div>
@@ -79,6 +82,11 @@ include 'includes/check-if-added.php';
     <!--footer -->
     <?php include 'includes/footer.php'?>
     <!--footer end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 
 
 

@@ -21,7 +21,7 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    background: rgb(188, 153, 153);
+    background: rgb(88, 66, 66);
     animation: fadeInUp 0.8s ease-out;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -80,9 +80,9 @@ body {
 
 /* Background Gradient Animation */
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #053561, #e73c7e, #417581, #e1b2d8);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    animation: gradientBG 3s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -99,7 +99,7 @@ body {
 .header{
     height: 100px;
     width: 100%;
-    background-color: #5c4747;
+    background-color: #7b6868;
     color: white;
     display: flex;
     justify-content: center;
