@@ -1,0 +1,77 @@
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Modal animation */
+.modal-dialog {
+    animation: zoomIn 0.4s ease-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Smooth fade-out when modal closes */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal.fade:not(.show) .modal-dialog {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.navbar-toggler {
+    border: none;
+    padding: 10px;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+    bottom: -8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg) translate(5px, -6px);
+}

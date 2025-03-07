@@ -1,0 +1,200 @@
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0; /* Start hidden until animation triggers */
+}
+
+/* Staggered delay for each card */
+.row .col-md-3:nth-child(1) .card { animation-delay: 0.1s; }
+.row .col-md-3:nth-child(2) .card { animation-delay: 0.2s; }
+.row .col-md-3:nth-child(3) .card { animation-delay: 0.3s; }
+.row .col-md-3:nth-child(4) .card { animation-delay: 0.4s; }
+
+/* Hover effect for cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pulse animation for buttons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.btn-warning {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Jumbotron slide-in animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.jumbotron {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Ensure smooth transitions */
+.card, .btn-warning, .jumbotron {
+    transition: all 0.3s ease;
+}
+/* Modal animation */
+.modal.fade .modal-dialog {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+    opacity: 1;
+}
+/* Hover effect for Add to Cart buttons */
+.btn-warning {
+    transition: all 0.4s ease; /* Smooth transition for all changes */
+    border: 2px solid transparent; /* Initial border setup */
+}
+
+.btn-warning:hover {
+    background: linear-gradient(45deg, #ff8c00, #ffc107); /* Gradient from orange to yellow */
+    transform: rotate(2deg); /* Slight tilt for a playful effect */
+    border: 2px solid #ff8c00; /* Orange border on hover */
+    color: #fff; /* Ensure text stays white */
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.5); /* Glowing effect */
+}
+
+.btn-warning:disabled:hover {
+    background: #ffc107; /* Revert to original Bootstrap warning color */
+    transform: none; /* No rotation for disabled buttons */
+    border: 2px solid transparent; /* No border for disabled */
+    box-shadow: none; /* No glow for disabled */
+    color: #fff; /* Keep text white */
+}
+/* Hover effect for Add to Cart buttons */
+.btn-warning {
+    transition: all 0.4s ease; /* Smooth transition for non-animated properties */
+    border: 2px solid transparent; /* Initial border setup */
+}
+
+.btn-warning:hover {
+    border: 2px solid #ff8c00; /* Orange border on hover */
+    transform: rotate(2deg); /* Slight tilt for a playful effect */
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.5); /* Glowing effect */
+    color: #fff; /* Ensure text stays white */
+    animation: bgColorAnimation 3s infinite; /* Background color animation */
+}
+
+.btn-warning:disabled:hover {
+    background: #ffc107; /* Revert to original Bootstrap warning color */
+    transform: none; /* No rotation for disabled buttons */
+    border: 2px solid transparent; /* No border for disabled */
+    box-shadow: none; /* No glow for disabled */
+    color: #fff; /* Keep text white */
+    animation: none; /* Disable animation for disabled buttons */
+}
+
+/* Keyframes for background color animation */
+@keyframes bgColorAnimation {
+    0% {
+        background: #ffc107; /* Starting color: Bootstrap yellow */
+    }
+    33% {
+        background: #ff8c00; /* Transition to orange */
+    }
+    66% {
+        background: #ff4500; /* Transition to a deeper orange-red */
+    }
+    100% {
+        background: #ffc107; /* Back to starting yellow */
+    }
+}
+/* Hover effect for Add to Cart buttons */
+.btn-warning {
+    transition: all 0.4s ease; /* Smooth transition for non-animated properties */
+    border: 2px solid transparent; /* Initial border setup */
+    position: relative; /* Required for pseudo-elements */
+    overflow: hidden; /* Contain the light effect */
+}
+
+.btn-warning:hover {
+    border: 2px solid #ff8c00; /* Orange border on hover */
+    transform: rotate(2deg); /* Slight tilt for a playful effect */
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.5); /* Base glow effect */
+    color: #fff; /* Ensure text stays white */
+    animation: glowPulse 1.5s infinite ease-in-out; /* Glow pulsing animation */
+}
+
+.btn-warning::after {
+    content: ''; /* Pseudo-element for the light effect */
+    position: absolute;
+    width: 50px; /* Size of the "light" spot */
+    height: 50px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, rgba(255, 140, 0, 0) 70%); /* Spotlight effect */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    pointer-events: none; /* Prevent interference with clicks */
+}
+
+.btn-warning:hover::after {
+    opacity: 1; /* Show the light on hover */
+    animation: moveLight 2s infinite; /* Animate the light movement */
+}
+
+.btn-warning:disabled:hover {
+    background: #ffc107; /* Revert to original Bootstrap warning color */
+    transform: none; /* No rotation for disabled buttons */
+    border: 2px solid transparent; /* No border for disabled */
+    box-shadow: none; /* No glow for disabled */
+    color: #fff; /* Keep text white */
+    animation: none; /* Disable animation for disabled buttons */
+}
+
+.btn-warning:disabled:hover::after {
+    opacity: 0; /* Hide light effect for disabled buttons */
+    animation: none; /* Stop light animation */
+}
+
+/* Keyframes for glow pulsing */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 140, 0, 0.8); /* Brighter and wider glow */
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+    }
+}
+
+/* Keyframes for moving light effect */
+@keyframes moveLight {
+    0% {
+        transform: translate(-50px, -50px); /* Start off-screen top-left */
+    }
+    25% {
+        transform: translate(50%, -20px); /* Move to middle-right */
+    }
+    50% {
+        transform: translate(100%, 50%); /* Move to bottom-right */
+    }
+    75% {
+        transform: translate(20px, 100%); /* Move to bottom-left */
+    }
+    100% {
+        transform: translate(-50px, -50px); /* Return to start */
+    }
+}
+
+
+
+
+

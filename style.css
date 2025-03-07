@@ -1,0 +1,132 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body{
+    overflow-x:hidden;
+    max-width: 100%;
+    margin:0;
+    margin-bottom: 150px;
+    background-color: #cf9d9d;
+
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Andika';
+    
+}
+#bg{
+    background-image: url(https://source.unsplash.com/featured/?men,fashion,sneakers);
+    /*https://images.unsplash.com/photo-1549942686-486aa99d2223*/
+    background-repeat: no-repeat;
+    min-height:600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    text-align: center;
+}
+#banner_content {
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.carousel-inner img {
+    width: 100%;
+    height:100%;
+}
+.footer{
+    position: absolute;
+    margin-top: 50px;
+    background-color: #141414;
+    min-height:150px;
+    padding-top:40px;
+    width: 100%;
+   
+    bottom: 0;
+    
+}
+.container  a {
+    color:black;
+}
+.container a:hover{
+    color:grey;
+    
+}
+#size{
+    max-height:200px;
+}
+
+.header{
+    .header{
+        width: 100%;
+        height: 100px;
+        background-color: #cf9d9d;
+    }
+}
+/* style.css */
+
+/* Fade-in animation for product cards */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0; /* Start hidden until animation triggers */
+}
+
+/* Staggered delay for each card */
+.row .col-md-3:nth-child(1) .card { animation-delay: 0.1s; }
+.row .col-md-3:nth-child(2) .card { animation-delay: 0.2s; }
+.row .col-md-3:nth-child(3) .card { animation-delay: 0.3s; }
+.row .col-md-3:nth-child(4) .card { animation-delay: 0.4s; }
+
+/* Hover effect for cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pulse animation for buttons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.btn-warning {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Jumbotron slide-in animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.jumbotron {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Ensure smooth transitions */
+.card, .btn-warning, .jumbotron {
+    transition: all 0.3s ease;
+}
+/* Modal animation */
+.modal.fade .modal-dialog {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+    opacity: 1;
+}
+

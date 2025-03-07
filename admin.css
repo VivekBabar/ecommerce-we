@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    background: rgb(133, 102, 102);
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-family: 'Andika', sans-serif;
+}
+
+.header h2 {
+    margin-top: 0;
+    font-family: 'Delius Swash Caps', cursive;
+}
+
+/* Card Styles with Animation */
+.card {
+    width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgb(0, 0, 0);
+    animation: fadeInUp 0.8s ease-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(216, 152, 152, 0.3);
+}
+
+/* Fade-in Animation for Card */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styles with Animation */
+.btn-warning {
+    background: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.btn-warning:hover {
+    background: #d4958f;
+    transform: scale(1.1);
+    animation: none; /* Disable pulse animation on hover */
+}
+
+/* Pulse Animation for Button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Background Gradient Animation */
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
