@@ -31,15 +31,7 @@ session_start();
           <img
             src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&h=400&q=80"
             class="img-fluid d-block rounded mx-auto image-thumbnail">
-          <p class="mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque, consequuntur cumque odit
-            sapiente blanditiis, expedita ipsam molestiae voluptates reprehenderit ea modi eaque rerum dicta dolores,
-            iusto ullam aliquid non?
-            Quidem quae odio nemo cumque consectetur natus doloremque voluptatem consequatur voluptate laboriosam, amet
-            maiores excepturi sunt aliquid magni voluptatibus aperiam laudantium dolores reiciendis? Laborum laboriosam,
-            nam ullam totam amet et.
-            Earum recusandae voluptate accusantium, placeat alias consequuntur aspernatur sed explicabo impedit et aut
-            assumenda hic repellendus esse facere ratione quod vitae laudantium. Obcaecati nobis sequi esse assumenda,
-            rerum dolores pariatur.</p>
+          <p class="mt-2">Welcome to Planet Shopify, a project website dedicated to empowering entrepreneurs and businesses in the world of e-commerce! Our mission is to help you create stunning online stores using the powerful Shopify platform. Whether you're just starting your journey or looking to scale your existing store, we provide expert guidance, tools, and resources to ensure your success in the digital marketplace. As a project-based website, we are focused on offering innovative solutions and valuable insights to help you build, grow, and succeed with ease. Join us on this exciting journey, and let's create something amazing together!</p>
         </div>
         <div class="col-md-5 mt-3">
           <span class="text-warning pt-3">
@@ -47,17 +39,7 @@ session_start();
             <h3>24 hours|7 days a week| 365 days a year Live Technical Support</h3>
           </span>
           <hr>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-            letters. There are many variations of passages of Lorel Ipsum available, but the majority have suffered
-            alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
-            hidden in the middle of text.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam ducimus a illum, at voluptate, iusto
-            eos tempora in quam exercitationem officia autem maxime deserunt. Reprehenderit necessitatibus sequi in
-            fugit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, facilis. Reiciendis dicta fuga esse
-            at excepturi inventore perferendis? Consequatur dicta blanditiis, magnam consequuntur possimus excepturi
-            eaque neque nulla libero temporibus!
+          <p>At Planet Shopify, we are committed to providing exceptional customer support around the clock. Our dedicated team is available 24/7 to assist you with any questions, concerns, or technical issues you may encounter. Whether you need help setting up your store, optimizing your site, or troubleshooting any challenges, we're here to ensure a seamless experience for you. We believe in being there for our customers every step of the way, offering quick, reliable, and friendly support whenever you need it. Your success is our priority, and we’re always just a message away!
           </p>
 
         </div>
